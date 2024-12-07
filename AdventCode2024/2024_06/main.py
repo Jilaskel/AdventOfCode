@@ -101,6 +101,9 @@ with open(fileName) as file:
 
 maxSameSeen = 4
 
+## pour optimiser, il suffisait de parcourir les positions contenus dans le précédent seen, car sinon le garde ne touchera juste pas l'obstacle...
+## pour déterminer si le garde est bloqué dans une boucle, il suffit de stocké un tuple avec sa position ET son orientation 
+
 for xi in range(Xmax):
     print("Beginning line " + str(xi) + "/" + str(Xmax))
     for yi in range(Ymax):
